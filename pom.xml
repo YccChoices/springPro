@@ -33,5 +33,13 @@
 			    </plugin>
     		</plugins>
     	</pluginManagement>
-    </build>
+    	<plugins>
+    		<plugin>
+    			<artifactId>maven-war-plugin</artifactId>
+    			<configuration>
+    				<version>3.0</version>
+    			</configuration>
+    		</plugin>
+    	</plugins>
+	</build>
 </project>
