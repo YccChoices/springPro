@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+   <!-- 配置文件改了以后不用重新启动 -->
+   <constant name="struts.devMode" value="true"/>
+	<package name="person" namespace="/" extends="struts-default">
+		<result-types>
+			<result-type name="chart" class="cn.itcast.s2sh0808.result.JFreeChartResult"></result-type>
+		</result-types>
+		<action name="login" method="loginCheck" class="com.ycc.action.LoginAction">
+			<result name="index">index.jsp</result>
+			<result type="success">success.jsp</result>
+		</action>
+	</package>	
+</struts>	
