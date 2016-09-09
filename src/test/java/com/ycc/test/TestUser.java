@@ -16,6 +16,13 @@ public class TestUser {
 		service.addUser("aa", "bbb");
 	}
 	@Test
+	public void testgetUser(){
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		UserService service = (UserService) context.getBean("userService");
+		System.out.println(service);
+		service.getUser("ycc", "123");
+	}
+	@Test
 	public void testSessionFactory(){
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		SessionFactory sessionFactory = (SessionFactory)context.getBean("sessionFactory");

@@ -15,9 +15,9 @@ public class UserServiceImpl implements UserService {
 		this.userDao = dao;
 	}
 	@Override
-	public User getUserById() {
+	public User getUser(String name,String pwd) {
 		// TODO Auto-generated method stub
-		return userDao.getUser();
+		return userDao.getUser(name,pwd);
 	}
 	@Override
 	public void addUser(String name, String pwd) {
