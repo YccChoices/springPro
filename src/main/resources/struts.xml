@@ -4,11 +4,18 @@
 	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
 <struts>
    <!-- 配置文件改了以后不用重新启动 -->
-   <constant name="struts.devMode" value="true"/>
+   <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+   <constant name="struts.devMode" value="true" />
+   <constant name="struts.i18n.encoding" value="UTF-8" />
 	<package name="default" extends="struts-default">
+		<action name="listaction" class="com.ycc.action.ListAction" method="list">
+            <result name="list">/list.jsp</result>
+        </action>
+        <!--
 		<action name="loginAction" class="com.ycc.action.LoginAction" method="loginCheck">
 			<result name="index">/index.jsp</result>
 			<result name="success">/success.jsp</result>
 		</action>
+		-->
 	</package>	
 </struts>	

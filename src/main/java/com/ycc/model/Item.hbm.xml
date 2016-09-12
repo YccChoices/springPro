@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping >
 	<!-- 定义Item实体 -->
-	<class name="com.cn.shop.model.Item" table="store_order_item">
+	<class name="com.ycc.model.Item" table="store_order_item">
 		<!-- 定义主键及其生成策略 -->
 		<id name="id" column="id" type="long">
 			<generator class="increment" />
@@ -12,8 +12,8 @@
 		<!-- 定义数量字段 -->
 		<property name="number" type="integer" not-null="true" column="amount"/>
 		<!-- 定义商品引用 -->
-		<many-to-one name="product" column="product_id" class="com.cn.shop.model.Product" cascade="none"></many-to-one>
+		<many-to-one name="product" column="product_id" class="com.ycc.model.Product" cascade="none"></many-to-one>
 		<!-- 定义所属的订单 -->
-		<many-to-one name="order" column="order_id" class="com.cn.shop.model.Order" cascade="save-update"></many-to-one>
+		<many-to-one name="order" column="order_id" class="com.ycc.model.Order" cascade="save-update"></many-to-one>
 	</class>
 </hibernate-mapping>

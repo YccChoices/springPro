@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping >
 	<!-- 定义User实体 -->
-	<class name="com.cn.shop.model.User" table="store_user" discriminator-value="common">
+	<class name="com.ycc.model.User" table="store_user" discriminator-value="common">
 		<!-- 定义主键及其生成策略 -->
 		<id name="id" column="id" type="long">
 			<generator class="increment" />
@@ -28,7 +28,7 @@
 		<!-- 定义办公室电话号码字段 -->
 		<property name="officePhone" column="officePhone"></property>
 		<!-- 定义管理员子类 -->
-		<subclass name="com.cn.shop.model.Administrator" discriminator-value="admin" >
+		<subclass name="com.ycc.model.Administrator" discriminator-value="admin" >
 			<property name="workNo" column="workNo"></property>
 		</subclass>
 	</class>

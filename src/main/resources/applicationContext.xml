@@ -16,6 +16,7 @@
 	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 	
 	<import resource="applicationContext-db.xml"/>
+	<!-- 
 	<bean id="uesrDao" class="com.ycc.dao.impl.UserDaoImpl">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory"/>
@@ -24,6 +25,17 @@
 	<bean id="userService" class="com.ycc.service.impl.UserServiceImpl">
 		<property name="userDao">
 			<ref bean="uesrDao"/>
+		</property>
+	</bean>
+	 -->
+	 <bean id="baseDAO" class="com.ycc.dao.impl.BaseDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	 <bean id="productService" class="com.ycc.service.impl.ProductServiceImpl">
+		<property name="baseDAO">
+			<ref bean="baseDAO"/>
 		</property>
 	</bean>
 </beans>

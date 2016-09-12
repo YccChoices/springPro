@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping >
 	<!-- 定义Product实体 -->
-	<class name="com.cn.shop.model.Product" table="store_product">
+	<class name="com.ycc.model.Product" table="store_product">
 		<!-- 定义主键及其生成策略 -->
 		<id name="id" column="id" type="long">
 			<generator class="increment" />
