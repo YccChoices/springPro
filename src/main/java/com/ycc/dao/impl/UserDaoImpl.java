@@ -25,7 +25,7 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		// TODO Auto-generated method stub
 		User user = new User();
 		user.setName(name);
-		user.setPwd(pwd);
+//		user.setPwd(pwd);
 		this.getHibernateTemplate().save(user);
 	}
 

@@ -11,7 +11,10 @@
 	<property name="show_sql">true</property>
 	
 	<mapping resource="com/ycc/model/User.hbm.xml" />
-
+	<mapping resource="com/ycc/model/User.hbm.xml"/>
+    <mapping resource="com/ycc/model/Order.hbm.xml"/>      	
+    <mapping resource="com/ycc/model/Item.hbm.xml"/>     
+    <mapping resource="com/ycc/model/Product.hbm.xml"/>
 </session-factory>
 
 </hibernate-configuration>
