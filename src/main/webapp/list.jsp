@@ -95,7 +95,6 @@
 				</TBODY>
 			</TABLE>
 			
-			<!-- 2014.8.29 分页功能 -->
 				<BR>
 				
 				<s:set name="page" value="#request['page']" />
