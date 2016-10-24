@@ -28,7 +28,7 @@
 		</property>
 	</bean>
 	 -->
-	 <bean id="baseDAO" class="com.ycc.dao.impl.BaseDAOImpl">
+	 <bean id="baseDAO" class="com.ycc.dao.impl.BaseDaoImpl">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory"/>
 		</property>
