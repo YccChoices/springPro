@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String context = request.getContextPath(); %>
+<% String basePath = request.getContextPath(); %>
 <%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -9,7 +9,7 @@
 <title>我的购物车</title>
 </head>
 <body>
-		<a href="<%=context %>/find.jsp">搜索商品</a>&nbsp;&nbsp;
+		<a href="">搜索商品</a>&nbsp;
 		<BR>
 			本系统的所有商品列表如下：
 			<BR>
@@ -36,7 +36,7 @@
 					<s:iterator value ="productlist" var="p">
 					<TR>
 						<TD>																											
-						<img src="<%=context %>/UploadImages/${p.imageSrc }" style="height:60px; width:80px" />														
+						<img src="" style="height:60px; width:80px" />														
 						</TD>						
 						<TD>
 						<s:property value="#p.name"/> |
@@ -48,7 +48,7 @@
 						<s:property value="#p.description"/> |
 						</TD>												
 						<TD>												
-						<a href="<%=context %>/from/addaction!addItem?productId=<s:property value="#p.id"/>">添加到购物车</a>						
+						<a href="">添加到购物车</a>						
 						</TD>
 					</TR>
 						</s:iterator>
@@ -58,18 +58,18 @@
 				<s:set name="page" value="#request['page']" />				
 				<s:set name="maxpage" value="#request['maxpage']" />					
 				<s:if test="#page==1">首页</s:if>	
-				<s:if test="#page>1 "><a href="<%=context %>/from/listaction!list?page=1"> 首页</a></s:if>					
+				<s:if test="#page>1 "><a href="<%=basePath %>/from/listaction!list?page=1"> 首页</a></s:if>					
 				<s:if test="#page == 1 ">上一页</s:if>					
-				<s:if test="#page>1 "><a href="<%=context %>/from/listaction!list?page=${page-1}"> 上一页</a></s:if>					
+				<s:if test="#page>1 "><a href="<%=basePath %>/from/listaction!list?page=${page-1}"> 上一页</a></s:if>					
 				<s:if test="#page ==#maxpage">下一页</s:if>					
-				<s:if test="#page< #maxpage "><a href="<%=context %>/from/listaction!list?page=${page + 1}"> 下一页</a></s:if>					
+				<s:if test="#page< #maxpage "><a href="<%=basePath %>/from/listaction!list?page=${page + 1}"> 下一页</a></s:if>					
 				<s:if test="#page == #maxpage">末页</s:if>					
-				<s:if test="#page< #maxpage  "><a href="<%=context %>/from/listaction!list?page=${maxpage}">末页</a></s:if>																								
+				<s:if test="#page< #maxpage  "><a href="<%=basePath %>/from/listaction!list?page=${maxpage}">末页</a></s:if>																								
 			<BR>			
-			<a href="<%=context %>/from/cart_inedx!CartIndex">查看购物车</a>&nbsp;&nbsp;
-			<a href="<%=context %>/from/order_index!index">结帐</a>&nbsp;&nbsp;
-			<a href="<%=context %>/from/listaction!list?page=1"> 返回首页</a>&nbsp;&nbsp;
-			<a href="<%=context %>/from/loginaction">登录</a>&nbsp;&nbsp;
-			<a href="<%=context %>/userregister.jsp">注册</a>&nbsp;&nbsp;			
+			<a href="">查看购物车</a>&nbsp;
+			<a href="">结帐</a>&nbsp;
+			<a href=""> 返回首页</a>&nbsp;
+			<a href="">登录</a>&nbsp;
+			<a href="">注册</a>&nbsp;		
 </body>
 </html>
