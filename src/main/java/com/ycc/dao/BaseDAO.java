@@ -6,7 +6,7 @@ import java.util.List;
 
 //基础DAO，包含基本的实体类增删改查操作
 
-public interface BaseDAO {
+public interface BaseDao {
 	
 	//保存一个实体对象
 	public <T> void saveEntity( T entity );
