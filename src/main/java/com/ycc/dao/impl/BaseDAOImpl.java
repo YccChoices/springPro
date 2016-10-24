@@ -7,9 +7,9 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
-import com.ycc.dao.BaseDAO;
+import com.ycc.dao.BaseDao;
 
-public class BaseDAOImpl extends HibernateDaoSupport implements BaseDAO  {
+public class BaseDaoImpl extends HibernateDaoSupport implements BaseDao  {
 	
 	@Override
 	public <T> void saveEntity(T entity) {
