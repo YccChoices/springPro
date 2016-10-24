@@ -3,19 +3,19 @@ package com.ycc.service.impl;
 import java.util.List;
 import java.util.Map;
 
-import com.ycc.dao.BaseDAO;
+import com.ycc.dao.BaseDao;
 import com.ycc.model.Product;
 import com.ycc.service.ProductService;
 
 public class ProductServiceImpl implements ProductService  {
 	
-	private BaseDAO baseDAO;
+	private BaseDao baseDAO;
 	
-	public BaseDAO getBaseDAO() {
+	public BaseDao getBaseDAO() {
 		return baseDAO;
 	}
 
-	public void setBaseDAO(BaseDAO baseDAO) {
+	public void setBaseDAO(BaseDao baseDAO) {
 		this.baseDAO = baseDAO;
 	}
 
